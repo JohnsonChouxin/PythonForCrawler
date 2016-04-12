@@ -25,7 +25,6 @@ class ImageDownload(object):
             deepIndex += 1
             # 写入图片
             print item["src"]
-
             u    = urllib.urlopen(item["src"])
             data = u.read()
             f    = open(path+str(deepIndex)+".jpg", 'wb')
@@ -37,7 +36,7 @@ class ImageDownload(object):
 # 网址构造参数
 index           = 0
 
-basicUrlTail    = "http://www.zcool.com.cn/index!"
+basicUrl    = "http://www.zcool.com.cn/index!"
 
 basicUrlTail    = ".html#mainList"
 
@@ -48,7 +47,7 @@ if not isExists:
     os.makedirs("zcool")
 
 # 进入循环
-for a in range(1,2):
+for a in range(1,11):
     # 打印页码
     print a
 
